@@ -35,7 +35,7 @@ class EntryCreateView(LockedView, SuccessMessageMixin, CreateView):
 class EntryUpdateView(LockedView, SuccessMessageMixin, UpdateView):
     model = Entry
     fields = ["title", "content"]
-    success_message = "Your new entry was created!"
+    success_message = "Your new entry was updated!"
 
     def get_success_url(self):
         return reverse_lazy(
