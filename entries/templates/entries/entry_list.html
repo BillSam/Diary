@@ -1,7 +1,17 @@
 {% extends "entries/base.html" %}
 
 {% block content %}
-{% for entry in entry_list %}
+    <article xmlns="http://www.w3.org/1999/html">
+    <h2 class="mark">
+        {% now "Y-m-d H:i" %}
+    </h2>
+        </br>
+    <a href="{% url 'entry-create' %}">
+        <button>Add new entry</button>
+    </a>
+    </article>
+
+{% for entry in object_list %}
     <article>
         <h2 class="{{ entry.date_created|date:'l' }}">
             {{ entry.date_created|date:'Y-m-d H:i' }}

@@ -24,7 +24,7 @@ urlpatterns = [
     ),
     path(
         "entry/<int:pk>/delete",
-        views.EntryDetailView.as_view(),
+        views.EntryDeleteView.as_view(),
         name="entry-delete",
     )
 ]
